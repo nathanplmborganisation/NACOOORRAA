@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { dbStore } from "../dbStore";
 import { CandidateProfile, ChatSession, Opportunity, Contact, DocumentFile, CalendarEvent, Company } from "../types";
+import { filterValidDocuments } from "../utils/documentFilter";
 import { GlassCard, GlassButton } from "../components/Shared";
 import { 
   Compass, 
@@ -536,7 +537,7 @@ Positionner la candidature sur les postes d'Assistant Banquier Privé / Gestionn
     // Validate IDs against actual store objects to filter out stale/deleted items
     const validOpps = opportunities.filter(o => selectedOppIds.includes(o.id));
     const validContacts = contacts.filter(c => selectedContactIds.includes(c.id));
-    const validDocs = documents.filter(d => selectedDocIds.includes(d.id));
+    const validDocs = filterValidDocuments(documents, selectedDocIds);
     const validCompanies = companies.filter(comp => selectedCompanyIds.includes(comp.id));
 
     return {
