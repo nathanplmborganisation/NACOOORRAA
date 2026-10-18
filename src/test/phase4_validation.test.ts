@@ -34,8 +34,8 @@ function runSuite() {
   const promptPrep = buildInterviewPrompt(payload, { mode: "prep_guide" });
   const promptSim = buildInterviewPrompt(payload, { mode: "simulation" });
 
-  assert(promptPrep.includes("fiche de préparation"), "Test 1.1 : Routage vers préparation entretien");
-  assert(promptSim.includes("simulation interactive"), "Test 1.2 : Routage vers simulation entretien");
+  assert(promptPrep.includes("GUIDE DE PRÉPARATION"), "Test 1.1 : Routage vers préparation entretien");
+  assert(promptSim.includes("SIMULATION INTERACTIVE"), "Test 1.2 : Routage vers simulation entretien");
 
   // 2. TEST ROUTAGE INTENTION : E-mail avec lettre vs CV seul
   const promptEmailWith = buildEmailPrompt(payload, { scenario: "with_cover_letter" });
@@ -45,6 +45,9 @@ function runSuite() {
   assert(promptEmailOnly.includes("cv_only"), "Test 2.2 : Routage vers e-mail CV seul");
 
   console.log(`\nTests passés : ${passed} | Tests échoués : ${failed}`);
+  if (failed > 0) {
+    process.exit(1);
+  }
 }
 
 runSuite();

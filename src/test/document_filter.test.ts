@@ -38,3 +38,6 @@ export function testEmptyDocumentFiltering() {
 
   console.log("✅ Test passed: All document filtering conditions met.");
 }
+
+// Exécution automatique du test
+testEmptyDocumentFiltering();
