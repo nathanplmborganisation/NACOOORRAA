@@ -26,9 +26,9 @@
 
 | **Vérification** | **Commande** | **Résultat** | **Code de sortie** | **Statut** |
 |-----------------|--------------|--------------|-------------------|------------|
-| Lint TypeScript | `bun run lint` | [Résultat exact] | `0` | ✅ PASS / ❌ FAIL |
-| Build | `bun run build` | [Résultat exact] | `0` | ✅ PASS / ❌ FAIL |
-| Tests | `bun run test` | [Résultat exact] | `0` | ✅ PASS / ❌ FAIL |
+| Lint TypeScript | `bun run lint` | [Résultat exact] | [à renseigner après exécution] | ✅ PASS / ❌ FAIL |
+| Build | `bun run build` | [Résultat exact] | [à renseigner après exécution] | ✅ PASS / ❌ FAIL |
+| Tests | `bun run test` | [Résultat exact] | [à renseigner après exécution] | ✅ PASS / ❌ FAIL |
 
 **Logs complets :**
 ```
