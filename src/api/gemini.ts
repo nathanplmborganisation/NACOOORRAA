@@ -1064,7 +1064,7 @@ Nombre total de sources secondaires actives : ${contextSummary.activeSourcesCoun
   * Poste / Alternance actuelle : ${candidateProfile.currentAlternance || "Non renseignée"}
   * Titres ciblés : ${(candidateProfile.targetTitles || []).join(", ") || "Finance / Banque"}
   * Compétences clés : ${(candidateProfile.skills || []).join(", ") || "Analyse financière, Gestion"}
-  * Formation : ${(candidateProfile.educations || []).map(e => `${e.degree} (${e.school}, ${e.field})`).join(" | ") || "Non renseignée"}
+  * Formation : ${(candidateProfile.educations || []).map(e => `${e.degree} (${e.school}, ${e.fieldOfStudy})`).join(" | ") || "Non renseignée"}
   * Expériences : ${(candidateProfile.experiences || []).map(exp => `${exp.role} chez ${exp.company}`).join(" | ") || "Non renseignée"}
 
 - OPPORTUNITÉS SÉLECTIONNÉES (${oppsList.length}) :
